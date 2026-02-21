@@ -75,6 +75,7 @@ def main():
 
         # Log model to MLflow
         mlflow.sklearn.log_model(model, "model")
+        mlflow.log_artifact(__file__)
 
         # Save model locally (for DVC)
         os.makedirs(os.path.dirname(model_output), exist_ok=True)

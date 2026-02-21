@@ -23,3 +23,12 @@ stages:
     - src\train.py
     outs:
     - models\churn_model.joblib
+  evaluate:
+    cmd: python src\evaluate.py params.yaml
+    deps:
+    - data\processed\test.csv
+    - models\churn_model.joblib
+    - params.yaml
+    - src\evaluate.py
+    metrics:
+    - metrics\metrics.json
