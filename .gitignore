@@ -10,8 +10,7 @@ __pycache__/
 
 # DVC
 .dvc/cache/
-data/
-models/
+
 
 # MLflow
 mlruns/

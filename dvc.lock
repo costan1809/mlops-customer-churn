@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  generate:
+    cmd: python src\generate_churn_data.py params.yaml
+    deps:
+    - path: params.yaml
+      hash: md5
+      md5: b26758037f75fae338e098005663d521
+      size: 408
+    - path: src\generate_churn_data.py
+      hash: md5
+      md5: 19b551ce920b99300420fc1bafe3703f
+      size: 3607
+    outs:
+    - path: data\raw\churn_raw.csv
+      hash: md5
+      md5: 1b11b1aa7c12366104ac0a63debcf59e
+      size: 193299

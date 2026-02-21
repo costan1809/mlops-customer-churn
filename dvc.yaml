@@ -1,0 +1,8 @@
+stages:
+  generate:
+    cmd: python src\generate_churn_data.py params.yaml
+    deps:
+    - params.yaml
+    - src\generate_churn_data.py
+    outs:
+    - data\raw\churn_raw.csv
