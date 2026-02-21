@@ -10,7 +10,7 @@ preprocess:
   output_test: data/processed/test.csv
 
 train:
-  model_type: logistic_regression
+  model_type: random_forest
   random_state: 42
   n_estimators: 300
   max_depth: 10
