@@ -40,3 +40,23 @@ stages:
       hash: md5
       md5: 4955e97f2a7801cfea224dd2f6909c87
       size: 158790
+  train:
+    cmd: python src\train.py params.yaml
+    deps:
+    - path: data\processed\train.csv
+      hash: md5
+      md5: 4955e97f2a7801cfea224dd2f6909c87
+      size: 158790
+    - path: params.yaml
+      hash: md5
+      md5: b26758037f75fae338e098005663d521
+      size: 408
+    - path: src\train.py
+      hash: md5
+      md5: 44ba6b70ee64376c9670be9165e85920
+      size: 2415
+    outs:
+    - path: models\churn_model.joblib
+      hash: md5
+      md5: d7e782589aa49ea02a7a6908e335e445
+      size: 487321

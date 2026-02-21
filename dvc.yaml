@@ -15,3 +15,11 @@ stages:
     outs:
     - data/processed/test.csv
     - data/processed/train.csv
+  train:
+    cmd: python src\train.py params.yaml
+    deps:
+    - data\processed\train.csv
+    - params.yaml
+    - src\train.py
+    outs:
+    - models\churn_model.joblib
