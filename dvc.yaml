@@ -6,3 +6,12 @@ stages:
     - src\generate_churn_data.py
     outs:
     - data\raw\churn_raw.csv
+  preprocess:
+    cmd: python src/preprocess.py params.yaml
+    deps:
+    - data/raw/churn_raw.csv
+    - params.yaml
+    - src/preprocess.py
+    outs:
+    - data/processed/test.csv
+    - data/processed/train.csv
