@@ -1,0 +1,21 @@
+# Virtual environments
+venv/
+training-env/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# DVC
+.dvc/cache/
+data/
+models/
+
+# MLflow
+mlruns/
+
+# OS
+.DS_Store
+Thumbs.db
