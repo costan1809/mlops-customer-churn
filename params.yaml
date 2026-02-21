@@ -12,8 +12,8 @@ preprocess:
 train:
   model_type: random_forest
   random_state: 42
-  n_estimators: 300
-  max_depth: 10
+  n_estimators: 1000
+  max_depth: 50
   model_output: models/churn_model.joblib
 
 evaluate:
