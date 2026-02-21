@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: b26758037f75fae338e098005663d521
-      size: 408
+      md5: b68d695a03f5138dd534dbe5d8b40b41
+      size: 415
     - path: src\generate_churn_data.py
       hash: md5
       md5: 19b551ce920b99300420fc1bafe3703f
@@ -25,8 +25,8 @@ stages:
       size: 193299
     - path: params.yaml
       hash: md5
-      md5: b26758037f75fae338e098005663d521
-      size: 408
+      md5: b68d695a03f5138dd534dbe5d8b40b41
+      size: 415
     - path: src/preprocess.py
       hash: md5
       md5: 93189a0c752a86f74b3c36fe06c9aa0d
@@ -49,8 +49,8 @@ stages:
       size: 158790
     - path: params.yaml
       hash: md5
-      md5: b26758037f75fae338e098005663d521
-      size: 408
+      md5: b68d695a03f5138dd534dbe5d8b40b41
+      size: 415
     - path: src\train.py
       hash: md5
       md5: 1601058e3d99d37d74a6f35a082d93d2
@@ -58,8 +58,8 @@ stages:
     outs:
     - path: models\churn_model.joblib
       hash: md5
-      md5: d7e782589aa49ea02a7a6908e335e445
-      size: 487321
+      md5: 3364e2d1b172eca07e53250f338bfc3e
+      size: 1679
   evaluate:
     cmd: python src\evaluate.py params.yaml
     deps:
@@ -69,12 +69,12 @@ stages:
       size: 39801
     - path: models\churn_model.joblib
       hash: md5
-      md5: d7e782589aa49ea02a7a6908e335e445
-      size: 487321
+      md5: 3364e2d1b172eca07e53250f338bfc3e
+      size: 1679
     - path: params.yaml
       hash: md5
-      md5: b26758037f75fae338e098005663d521
-      size: 408
+      md5: b68d695a03f5138dd534dbe5d8b40b41
+      size: 415
     - path: src\evaluate.py
       hash: md5
       md5: cf951187dcedb3659a37db651a2ec2a7
@@ -82,5 +82,5 @@ stages:
     outs:
     - path: metrics\metrics.json
       hash: md5
-      md5: 8c056e85c53f4b8de44f47eeaed9b678
-      size: 98
+      md5: 780e02877ded74b510e64d9db5601322
+      size: 143
